@@ -1,0 +1,11 @@
+[Unit]
+Description=opentracker bittorrent tracker
+After=network.target
+
+[Service]
+Type=simple
+User=opentracker
+ExecStart=/usr/bin/opentracker -f /etc/opentracker/opentracker.conf
+
+[Install]
+WantedBy=multi-user.target

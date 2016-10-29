@@ -1,0 +1,13 @@
+post_install() {
+    if hash systemd-sysusers &>/dev/null; then
+        systemd-sysusers opentracker.conf
+    fi
+}
+
+post_upgrade() {
+    if hash systemd-sysusers &>/dev/null; then
+        systemd-sysusers opentracker.conf
+    fi
+}
+
+# vim:set ts=4 sts=4 sw=4 et:
